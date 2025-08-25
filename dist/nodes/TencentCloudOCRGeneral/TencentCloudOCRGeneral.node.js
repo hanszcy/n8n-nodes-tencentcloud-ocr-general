@@ -193,7 +193,6 @@ class TencentCloudOCRGeneralNode {
     async execute() {
         const items = this.getInputData();
         const returnData = [];
-        const resource = this.getNodeParameter('resource', 0);
         const operation = this.getNodeParameter('operation', 0);
         let ocr;
         for (let i = 0; i < items.length; i++) {
