@@ -258,18 +258,14 @@ export class TencentCloudOCRGeneralNode implements INodeType {
 						);
 				}
 
-				const executionData = this.helpers.constructExecutionMetaData(
-					this.helpers.returnJsonArray(result),
-					{ itemData: { item: i } },
-				);
+				const executionData = this.helpers.returnJsonArray(result);
 
 				returnData.push(...executionData);
 			} catch (error) {
 				if (this.continueOnFail()) {
-					const executionData = this.helpers.constructExecutionMetaData(
-						this.helpers.returnJsonArray({ error: error.message }),
-						{ itemData: { item: i } },
-					);
+					const executionData = this.helpers.returnJsonArray({ 
+						error: error instanceof Error ? error.message : String(error) 
+					});
 					returnData.push(...executionData);
 					continue;
 				}
