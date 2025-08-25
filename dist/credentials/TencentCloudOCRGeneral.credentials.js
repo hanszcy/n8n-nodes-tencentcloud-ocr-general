@@ -115,4 +115,5 @@ class TencentCloudOCRGeneralApi {
     }
 }
 exports.TencentCloudOCRGeneralApi = TencentCloudOCRGeneralApi;
+exports.default = TencentCloudOCRGeneralApi;
 //# sourceMappingURL=TencentCloudOCRGeneral.credentials.js.map

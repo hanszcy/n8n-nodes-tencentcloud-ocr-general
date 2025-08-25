@@ -114,3 +114,6 @@ export class TencentCloudOCRGeneralApi implements ICredentialType {
 		},
 	];
 }
+
+// 默认导出
+export default TencentCloudOCRGeneralApi;

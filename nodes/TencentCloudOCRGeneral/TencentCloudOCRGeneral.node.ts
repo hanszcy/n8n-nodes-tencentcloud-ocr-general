@@ -14,7 +14,7 @@ export class TencentCloudOCRGeneralNode implements INodeType {
 		icon: 'file:tencentcloud.svg',
 		group: ['transform'],
 		version: 1,
-		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+		subtitle: '={{$parameter["operation"]}}',
 		description: '腾讯云OCR通用文字识别',
 		defaults: {
 			name: 'Tencent Cloud OCR General',
@@ -275,3 +275,6 @@ export class TencentCloudOCRGeneralNode implements INodeType {
 		return this.prepareOutputData(returnData);
 	}
 }
+
+// 默认导出，这是n8n要求的
+export default TencentCloudOCRGeneralNode;

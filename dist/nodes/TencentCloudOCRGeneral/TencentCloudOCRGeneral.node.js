@@ -11,7 +11,7 @@ class TencentCloudOCRGeneralNode {
             icon: 'file:tencentcloud.svg',
             group: ['transform'],
             version: 1,
-            subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+            subtitle: '={{$parameter["operation"]}}',
             description: '腾讯云OCR通用文字识别',
             defaults: {
                 name: 'Tencent Cloud OCR General',
@@ -255,4 +255,5 @@ class TencentCloudOCRGeneralNode {
     }
 }
 exports.TencentCloudOCRGeneralNode = TencentCloudOCRGeneralNode;
+exports.default = TencentCloudOCRGeneralNode;
 //# sourceMappingURL=TencentCloudOCRGeneral.node.js.map
