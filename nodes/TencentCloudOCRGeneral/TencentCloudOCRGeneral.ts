@@ -4,7 +4,7 @@ import * as fs from "fs";
 export class TencentCloudOCRGeneral {
 	private client: any;
 
-	constructor(secretId: string, secretKey: string, region: string = "ap-beijing") {
+	constructor(secretId: string, secretKey: string, region = "ap-beijing") {
 		// 初始化OCR客户端
 		const OcrClient = tencentcloud.ocr.v20181119.Client;
 		this.client = new OcrClient({
@@ -109,7 +109,7 @@ export class TencentCloudOCRGeneral {
 	/**
 	 * 身份证识别
 	 */
-	async idCardOCR(image: string | Buffer, cardSide: string = "FRONT") {
+	async idCardOCR(image: string | Buffer, cardSide = "FRONT") {
 		try {
 			const params = {
 				ImageBase64: this.getImageBase64(image),
